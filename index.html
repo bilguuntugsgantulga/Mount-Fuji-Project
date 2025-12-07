@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mount Fuji Travel Guide</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style>
+        #header {
+            background-color: #cde7ff;
+        }
+        #adbox h1 {
+            color: #003366;
+            text-shadow: 2px 2px 4px #ffffff;
+        }
+
+        #template-link {
+            text-align: center;
+            padding: 8px;
+            background: #e8f2ff;
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+        window.onload = function() {
+            alert("Welcome to my Mount Fuji Travel Guide!");
+        };
+
+        function checkSeason() {
+            const month = document.getElementById("seasonInput").value.toLowerCase();
+            let message = "";
+
+            if (["december","january","february"].includes(month)) {
+                message = "Winter: Mount Fuji is covered with snow. Very cold but beautiful views.";
+            } else if (["march","april","may"].includes(month)) {
+                message = "Spring: Cherry blossoms around Fuji are amazing.";
+            } else if (["june","july"].includes(month)) {
+                message = "Rainy season: Fuji is often covered by clouds.";
+            } else if (month === "august") {
+                message = "Summer: Official climbing season. Best time to hike.";
+            } else if (["september","october","november"].includes(month)) {
+                message = "Autumn: Clear skies and colorful leaves.";
+            } else {
+                message = "Please enter a valid month.";
+            }
+
+            document.getElementById("seasonResult").innerText = message;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="background">
+        <div id="page">
+
+            <div id="template-link">
+                Original Template:
+                <a href="https://freewebsitetemplates.com/preview/beachresort/" target="_blank">
+                    Beach Resort Template
+                </a>
+            </div>
+
+            <div id="header">
+                <div id="logo">
+                    <a href="index.html"><img src="images/fuji_logo.jpg" alt="LOGO" height="112" width="118"></a>
+                </div>
+
+                <div id="navigation">
+                    <ul>
+                        <li class="selected"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="rooms.html">Accommodations</a></li>
+                        <li><a href="dives.html">Hiking & Trails</a></li>
+                        <li><a href="foods.html">Food</a></li>
+                        <li><a href="news.html">Travel Tips</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="contents">
+
+                <div id="adbox">
+                    <img src="images/fuji_lake.jpg" alt="Mount Fuji Lake Kawaguchi">
+
+                    <h1>Discover Mount Fuji</h1>
+                    <p>
+                        Welcome to my Mount Fuji travel guide. Here I share information about visiting Fuji, best viewpoints,
+                        local food, and travel tips. This site was edited from a free template.
+                    </p>
+                    <p>
+                        Original template:
+                        <a href="https://freewebsitetemplates.com/preview/beachresort/" target="_blank">
+                            Beach Resort Template
+                        </a>
+                    </p>
+                </div>
+
+                <br><br>
+
+                <div class="box" style="padding: 20px;">
+                    <h2>Check the Best Season to Visit</h2>
+                    <p>Type any month to see what Mount Fuji looks like in that season.</p>
+
+                    <input type="text" id="seasonInput" placeholder="Enter month here" style="padding:5px;">
+                    <button onclick="checkSeason()" style="padding:5px 10px; margin-left:5px;">Check</button>
+
+                    <p id="seasonResult" style="margin-top:10px; font-weight:bold;"></p>
+                </div>
+
+                <div id="main">
+                    <div class="box">
+                        <h3>Latest Updates</h3>
+                        <ul>
+                            <li>
+                                <h4><a href="news.html">Best Fuji Viewing Spots</a></h4>
+                                <span>December 2025</span>
+                                <p>My favorite places to view Mount Fuji.</p>
+                            </li>
+
+                            <li>
+                                <h4><a href="news.html">Weather Tips for Travelers</a></h4>
+                                <span>November 2025</span>
+                                <p>Tips about Fuji weather for beginners.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="testimonials" class="box">
+                        <h3>Visitor Comment</h3>
+                        <p>
+                            “Mount Fuji looks different in every season. My favorite time was autumn.”
+                            <span>- A Traveler</span>
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div id="footer">
+                <div>
+                    <ul class="navigation">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="rooms.html">Accommodations</a></li>
+                        <li><a href="dives.html">Hiking & Trails</a></li>
+                        <li><a href="foods.html">Food</a></li>
+                        <li><a href="news.html">Travel Tips</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <p style="text-align:center; padding:15px;">
+                    © 2025 Gantulga Bilguuntugs — Student ID: 24229528
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
